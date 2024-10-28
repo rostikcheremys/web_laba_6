@@ -82,7 +82,7 @@ function getSunTime($result, $event)
     $pattern = $event === "sunrise" ? '/Восход — ([\d]{1,2}:\d{2})/u' : '/Заход — ([\d]{1,2}:\d{2})/u';
     if (preg_match($pattern, $result, $matches)) return $matches[1];
 
-    return ucfirst($event) . " не знайдено";
+    return "не знайдено";
 }
 
 function getTemperature($result)
